@@ -1,0 +1,20 @@
+@use '../../common/styles/constants.scss' as const;
+
+.Todo {
+  $todo-padding: const.$padding-m const.$padding-l;
+  $todo-border: const.$border-m const.$notify solid;
+  
+  display: flex;
+  flex-direction: row;
+
+  & div {
+    display: flex;
+    flex-direction: column;
+    &:first-child {
+      flex-grow: 1;
+    }
+  }
+
+  padding: $todo-padding;
+  border: $todo-border;
+}

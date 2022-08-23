@@ -1,0 +1,13 @@
+@use '../../common/styles/constants.scss' as const;
+
+.TodoList {
+  display: flex;
+  flex-direction: column;
+
+  &_Todo {
+    margin: const.$margin-m 0 0 0;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
