@@ -1,0 +1,12 @@
+@use '../../common/styles/constants.scss' as const;
+
+.Underscore {
+    $u-color: const.$notify-bg;
+    
+    display: none;
+
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background-color: $u-color;
+}
