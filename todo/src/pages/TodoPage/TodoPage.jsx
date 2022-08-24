@@ -1,29 +1,29 @@
 import React, { useState } from 'react'
-import { Layout } from '../../components/Layout/Layout'
 import { TodoForm } from '../../components/TodoForm/TodoForm'
 import { TodoList } from '../../components/TodoList/TodoList'
+import { useSelector, useDispatch } from 'react-redux'
+import { addTodo, removeTodo } from '../../store/todoReducer'
 
 export const TodoPage = () => {
-    const [todoList, setTodoList] = useState([])
+    const todoList = useSelector(state => state.todo.currentList)
+    const dispatch = useDispatch()
     
-    const addTodo = (name, description) => {
+    const add = (name, description) => {
         if (!name) return
         const newTodo = {
             id: Date.now(),
             name: name,
             description: description
         }
-        setTodoList([...todoList, newTodo])
+        dispatch(addTodo(newTodo))
     }
-    const removeTodo = (item) => {
-        setTodoList(
-            todoList.filter(todo => todo.id !== item.id)
-        )
+    const remove = (item) => {
+        dispatch(removeTodo(item.id))
     }
   return (
     <>
-        <TodoForm create={addTodo} />
-        <TodoList todos={todoList} deleteTodo={removeTodo}/>
+        <TodoForm create={add} />
+        <TodoList todos={todoList} deleteTodo={remove}/>
     </>
   )
 }
