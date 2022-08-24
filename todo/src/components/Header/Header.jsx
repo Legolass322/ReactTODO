@@ -8,6 +8,7 @@ export const Header = () => {
         <Navbar>
             <Link to='/'>Todo</Link>
             <Link to='/about'>About</Link>
+            <Link to='/just'>Just</Link>
         </Navbar>
     </header>
   )
