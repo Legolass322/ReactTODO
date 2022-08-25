@@ -5,7 +5,6 @@ export const JustPage = () => {
     const makeObservable = useCallback(
         (element, callback) => {
             const handler = e => {
-                console.log(element)
                 callback(element)
             }
             element.addEventListener('mouseover', handler)

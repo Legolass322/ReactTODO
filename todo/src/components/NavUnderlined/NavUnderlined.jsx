@@ -1,7 +1,11 @@
 import React, {useRef, useEffect} from 'react'
 import classes from './NavUnderlined.module.scss'
 
-export const NavUnderlined = ({children, makeObservable, ...props}) => {
+export const NavUnderlined = ({
+        children, 
+        makeObservable, 
+        ...props
+    }) => {
     const underscore = useRef()
     const list = useRef()
     const underscoreState = useRef({
@@ -43,14 +47,13 @@ export const NavUnderlined = ({children, makeObservable, ...props}) => {
     useEffect(() => {
         const lchildren = list.current.children
         const destructors = []
-        console.log('Adding eventListeners: ', lchildren, list.current.childElementCount)
         for (let i = 1; i < list.current.childElementCount; i++) {
             destructors.push(makeObservable(lchildren[i], setUnderscore))
         }
         return () => {
             destructors.forEach(dest => dest())
         }
-    }, [makeObservable, setUnderscore])
+    }, [makeObservable])
     
 
   return (
