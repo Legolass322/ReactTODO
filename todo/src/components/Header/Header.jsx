@@ -35,7 +35,7 @@ export const Header = () => {
     <header>
         <NavUnderlined makeObservable={makeObservable}>
             {links.map(link => (
-                <Link {...link}  />
+                <Link {...link} key={link.key} />
             ))}
         </NavUnderlined>
     </header>

@@ -25,3 +25,4 @@ jobs:
           cd ./todo
           npm install
           npm run lint
+          npm run build
