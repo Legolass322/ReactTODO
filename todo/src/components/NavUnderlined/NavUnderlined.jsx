@@ -43,7 +43,6 @@ export const NavUnderlined = ({children, makeObservable, ...props}) => {
     useEffect(() => {
         const lchildren = list.current.children
         const destructors = []
-        console.log('Adding eventListeners: ', lchildren, list.current.childElementCount)
         for (let i = 1; i < list.current.childElementCount; i++) {
             destructors.push(makeObservable(lchildren[i], setUnderscore))
         }
