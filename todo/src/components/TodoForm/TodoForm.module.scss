@@ -1,0 +1,13 @@
+@use '../../common/styles/constants.scss' as const;
+
+.TodoForm {
+  display: flex;
+  flex-direction: column;
+
+  * {
+    margin-bottom: const.$margin-m;
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

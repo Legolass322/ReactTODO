@@ -1,0 +1,23 @@
+@use '../../common/styles/constants.scss' as const;
+
+.Navbar {
+  width: 100%;
+  & > ul {
+    list-style: none;
+    position: relative;
+    
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+}
+.Underscore {
+  $u-color: const.$notify-bg;
+  
+  display: none;
+
+  position: absolute;
+  height: 2px;
+  width: 0;
+  background-color: $u-color;
+}

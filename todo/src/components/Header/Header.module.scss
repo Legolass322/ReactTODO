@@ -1,0 +1,10 @@
+@use '../../common/styles/constants.scss' as const;
+
+.Header {
+  $header-color: const.$notify-bg;
+  
+  height: 80px;
+  background-color: $header-color;
+
+  display: flex;
+}

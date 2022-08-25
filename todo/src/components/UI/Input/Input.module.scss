@@ -1,0 +1,17 @@
+@use '../../../common/styles/constants.scss' as const;
+
+.Input {
+  $input-border: const.$notify const.$border-s solid;
+  $input-text-color: const.$notify-text;
+  $input-padding: const.$padding-s const.$padding-m;
+  $input-radius: const.$radius-s;
+
+  color: $input-text-color;
+  border: $input-border;
+  border-radius: $input-radius;
+  padding: $input-padding;
+
+  &::placeholder {
+    color: const.light($input-text-color);
+  }
+}

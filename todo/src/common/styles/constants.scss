@@ -1,0 +1,98 @@
+/* COLORS */
+// COLOR HELPERS
+@function dark($color) {
+    @return darken($color, 15%);
+}
+@function light($color) {
+    @return lighten($color, 15%);
+}
+
+// COLOR DEFINITIONS
+$red-50: #FFC9CA;
+$red-100: #FF9C9D;
+$red-200: #FF1C28;
+$red-600: #9F000B;
+
+$sunset-50: #FFC9CA;
+$sunset-200: #FE1F2A;
+$sunset-500: #BB0412;
+
+$mint-0: #EBF9E8;
+$mint-50: #ABE59F;
+$mint-100: #60CF4A;
+$mint-200: #399428;
+$mint-600: #225717;
+
+$orange-50: #FDCF8D;
+$orange-100: #FBA427;
+$orange-200: #BB7003;
+
+$teal-0: #D7FCFC;
+$teal-50: #76E8E8;
+$teal-100: #64C7C7;
+$teal-300: #3E8080;
+$teal-600: #265454;
+
+$indigo-50: #D6D3F3;
+$indigo-200: #7778D7;
+$indigo-600: #3E4496;
+
+$grey-0: #F4F5F4;
+$grey-100: #E1E1E1;
+$grey-300: #AFAFB4;
+$grey-500: #696877;
+
+$white: #ffffff;
+$black: #000000;
+
+// COLOR MEANINGS
+$light-bg: $grey-0;
+
+$notify-bg-light: $teal-0;
+$notify-bg: $teal-50;
+$notify: $teal-100;
+$notify-text: $teal-300;
+
+$success-bg-light: $mint-0;
+$success-bg: $mint-50;
+$success: $mint-100;
+$success-text: $mint-600;
+
+$fail-bg-light: $red-50;
+$fail-bg: $red-100;
+$fail: $red-200;
+$fail-text: $red-600;
+
+/* indentS */
+$indent-2: 2px;
+$indent-4: 4px;
+$indent-8: 8px;
+$indent-12: 12px;
+$indent-16: 16px;
+$indent-20: 20px;
+$indent-24: 24px;
+
+// MARGIN
+$margin-xs: $indent-2;
+$margin-s: $indent-4;
+$margin-m: $indent-8;
+$margin-l: $indent-12;
+$margin-xl: $indent-16;
+
+// PADDING
+$padding-xs: $indent-2;
+$padding-s: $indent-4;
+$padding-m: $indent-8;
+$padding-l: $indent-12;
+$padding-xl: $indent-16;
+
+// ROUNDING
+$radius-s: $indent-4;
+$radius-m: $indent-8;
+$radius-mm: $indent-12;
+$radius-l: $indent-16;
+
+// BORDER
+$border-s: 1px;
+$border-m: 2px;
+$border-l: 4px;

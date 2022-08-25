@@ -1,0 +1,33 @@
+@use '../../../common/styles/constants.scss' as const;
+
+@mixin button-action($bg-color) {
+  transition: background-color 0.2s;
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+  &:active {
+    background-color: darken($bg-color, 15%);
+  }
+}
+
+.Button {
+  $btn-bg: const.$notify-bg-light;
+  $btn-text-color: const.$notify-text;
+  $btn-padding: const.$padding-m const.$padding-l;
+  $btn-radius: const.$radius-m;
+  $btn-border: const.$border-s const.$notify-bg solid;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: $btn-padding;
+  border-radius: $btn-radius;
+  border: $btn-border;
+  
+  & p {
+    color: $btn-text-color; 
+  }
+  cursor: pointer;
+  @include button-action($btn-bg);
+}

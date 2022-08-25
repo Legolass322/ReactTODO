@@ -1,10 +1,15 @@
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-      </header>
-    </div>
-  );
-}
+import React from 'react'
+import store from './store/index'
+import { Provider } from 'react-redux'
+import { AppRouter } from './routers/AppRouter'
 
-export default App;
+
+export default function App() {
+    return (
+    <div className='App'>
+        <Provider store={store}>
+            <AppRouter />
+        </Provider>
+    </div>
+    )
+}
