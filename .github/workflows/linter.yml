@@ -25,5 +25,5 @@ jobs:
         run: |
           cd ./todo
           npm install
+          npx webpack
           npm run lint
-          npm run build
