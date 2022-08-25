@@ -23,6 +23,9 @@
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.js src/**/*.jsx"
   },
+  "compilerOptions": {
+    "baseUrl": "./src"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
